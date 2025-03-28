@@ -8,19 +8,24 @@
 import SwiftUI
 
 struct AppetizerListView: View {
+
+  @StateObject private var viewModel = AppetizerListViewModel()
+
   var body: some View {
     NavigationView {
       List {
-        ForEach(MockData.appetizers) { appetizer in
+        ForEach(viewModel.appetizers) { appetizer in
           AppetizerListItemView(appetizer: appetizer)
         }
       }
       .navigationTitle("Appetizers")
+    }
+    .onAppear {
+      viewModel.getAppetizers()
     }
   }
 }
 
 #Preview {
   AppetizerListView()
-    .preferredColorScheme(.light)
 }
