@@ -13,13 +13,12 @@ struct AppetizerListItemView: View {
 
   var body: some View {
     HStack {
-      Image("asian-flank-steak")
-        .resizable()
+      AppetizerRemoteImageView(urlString: appetizer.imageURL)
         .aspectRatio(contentMode: .fit)
         .clipShape(.rect(cornerRadius: 10))
         .frame(width: 120, height: 90)
 
-      VStack(alignment: .leading, spacing: 10) {
+      VStack(alignment: .leading, spacing: 5) {
         Text(appetizer.name)
           .font(.title2)
           .fontWeight(.medium)
