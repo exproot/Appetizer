@@ -3,6 +3,7 @@ Appetizer is a project to practice and learn SwiftUI by following Sean Allen's S
 
 ## Screens
 ![Home](appetizer-list.png)
+![Home](appetizer-details.png)
 ![Home](appetizer-account.png)
 ![Home](appetizer-order.png)
 
