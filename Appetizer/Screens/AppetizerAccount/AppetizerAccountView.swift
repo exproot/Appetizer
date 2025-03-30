@@ -44,7 +44,12 @@ struct AppetizerAccountView: View {
               focusedTextField = nil
             }
 
-          DatePicker("Birthdate", selection: $viewModel.user.birthdate, displayedComponents: .date)
+          DatePicker(
+            "Birthdate",
+            selection: $viewModel.user.birthdate,
+            in: Date.maximumAge()...Date.minimumAge(),
+            displayedComponents: .date
+          )
 
           Button {
             viewModel.saveChanges()
