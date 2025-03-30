@@ -31,9 +31,7 @@ struct AppetizerOrderView: View {
           } label: {
             AppetizerButton(title: "$\(order.totalPrice) - Place Holder")
           }
-          .buttonStyle(.borderedProminent)
-          .controlSize(.large)
-          .tint(Color.green)
+          .modifier(StandardButtonStyle())
           .padding(.bottom, 40)
         }
 

@@ -46,9 +46,7 @@ struct AppetizerDetailsView: View {
       } label: {
         AppetizerButton(title: "$\(appetizer.price) - Add To Order")
       }
-      .buttonStyle(.borderedProminent)
-      .controlSize(.large)
-      .tint(.green)
+      .modifier(StandardButtonStyle())
       .padding()
     }
     .frame(width: 300, height: 525)
