@@ -14,9 +14,17 @@ struct AppetizerListItemView: View {
   var body: some View {
     HStack {
       AppetizerRemoteImageView(urlString: appetizer.imageURL)
-        .aspectRatio(contentMode: .fit)
-        .clipShape(.rect(cornerRadius: 10))
-        .frame(width: 120, height: 90)
+        .modifier(StandardImageStyle())
+
+//      AsyncImage(url: URL(string: appetizer.imageURL)) { image in
+//        image
+//          .resizable()
+//          .modifier(StandardImageStyle())
+//      } placeholder: {
+//        Image("food-placeholder")
+//          .resizable()
+//          .modifier(StandardImageStyle())
+//      }
 
       VStack(alignment: .leading, spacing: 5) {
         Text(appetizer.name)
